@@ -2,17 +2,19 @@ import React from "react";
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 import {Link} from "gatsby";
-import landingImg from "../images/landingImg.jpg";
+import landingImg from "../images/exterior1.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Background = styled("div")`
+    position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${ landingImg });
     background-size: cover;
-    height: 950px;
+    height: 880px;
     color: white;
     text-align: center;
+    //transform: translate3d(0,-80px,0);
 `
 
 const MarginContainer = styled("div")`
@@ -22,7 +24,7 @@ const MarginContainer = styled("div")`
 `
 
 const ContentContainer = styled("div")`
-    padding: 250px 30px;
+    padding: 300px 30px;
 
     #arrow {
         transition: 0.3s;
@@ -35,7 +37,7 @@ const ContentContainer = styled("div")`
 
 const Arrow = props => {
     return (
-    <a href="#info" style={{ cursor:`pointer`, position: `absolute`, bottom: `50px`, left:`49%`}}>
+    <a href="#info" style={{ cursor:`pointer`, position: `absolute`, bottom: `70px`, left:`49%`}}>
         <FontAwesomeIcon id="arrow" color="white" size="3x" icon={props.icon} />
     </a>
     )

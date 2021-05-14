@@ -10,6 +10,5 @@ export default function Layout({children}){
         <Header/>
         <Global styles={[globalStyles]}/>
         {children}
-        <Footer/>
     </div>)
 }

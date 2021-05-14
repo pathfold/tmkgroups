@@ -1,5 +1,7 @@
 import { css } from "@emotion/react";
+import "@fontsource/quicksand"
 import "@fontsource/catamaran"
+import "@fontsource/comfortaa"
 
 const globalStyles = css`
     html {
@@ -7,7 +9,7 @@ const globalStyles = css`
     }
 
     body {
-        font-family: "Catamaran";
+        font-family: "catamaran";
     }
 
     * {
@@ -21,7 +23,29 @@ const globalStyles = css`
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 2rem;
+        margin-bottom: .5rem;
+        font-weight: lighter;
+    }
+
+    img {
+        margin-bottom: 30px;
+    }
+
+    .header { 
+        background-color: white;
+        transition: .3s;
+    }
+
+    body.dark-header {
+        .header { 
+            background-color: black;
+            transition: .3s;
+            
+            a, svg {
+                color: white;
+            }
+        }
     }
 
     .specialHeader::before, .specialHeader::after {
@@ -42,12 +66,13 @@ const globalStyles = css`
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: "Catamaran";
+        font-family: "catamaran";
     }
 
-    p {
-        margin-bottom: 20px;
+    p, img {
+        margin-bottom: 0px;
     }
+    
 
     .button {
         font-size: 13px;

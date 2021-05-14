@@ -5,7 +5,7 @@ import {Link} from "gatsby";
 const ContentContainer = styled("div")`
     display: flex;
     align-items: center;
-    padding: 50px 0;
+    padding: 100px 0;
 
     @media (max-width: 1200px){
         flex-direction: column;
@@ -14,25 +14,33 @@ const ContentContainer = styled("div")`
 `
 
 const ImageSection = styled("div")`
-    width: 60%;
+    width: 45%;
     display: flex;
     justify-content: center;
 
     img {
-        border-radius: 20px;
-        max-height: 270px;
+        border-radius: 5%;
+        max-height: 400px;
     }
 
     @media (max-width: 1200px){
         width: 80%;
+
+        img {
+            margin-bottom: 30px;
+        }
     }
 `
 
 const TextSection = styled("div")`
-    margin: 0 80px;
-    width: 47%;
+    margin: 0 100px;
+    width: 55%;
     display: flex;
     flex-direction: column;
+
+    p {
+        line-height: 35px;
+    }
 
     @media (max-width: 1200px){
         width: 60%;
@@ -49,12 +57,12 @@ export default function ImageContainer(props){
             <ImageSection>
                 <img src={props.image} alt={props.alt}/>
             </ImageSection>
-
             <TextSection>
-                <h3>{props.title}</h3>
+                <h2>{props.title}</h2>
                 <p>{props.text}</p>
                 <Link to="/gallery" className="button"><button>Visit Gallery</button></Link>
             </TextSection>
         </ContentContainer>
-    );
+        );
+    
 }

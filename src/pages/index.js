@@ -5,8 +5,8 @@ import Layout from "../components/layout";
 import {Link} from "gatsby";
 import Fade from "react-reveal/Fade";
 
-import left from "../images/left.jpg";
-import DroneGif from "../images/drone.gif"
+import left from "../images/interior1.jpg";
+import house2 from "../images/exterior1.jpg"
 
 import Hero from "../components/hero";
 import ImageContainer from "../components/imageContainer";
@@ -36,9 +36,12 @@ export default function Landing(){
         <Layout>
             <Helmet>
                 <title>Quality Media | TMK Photos</title>
+                <body className="dark-header"/>
             </Helmet>
 
             <Hero/>
+
+            <Fade>
             <InfoContainer id="info">
                 <MarginContainer>
                     <ImageContainer title="Assured Craftsmanship In Your Photos" image={left} alt="kitchen island" text="Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down."/>
@@ -53,9 +56,10 @@ export default function Landing(){
 
             <InfoContainer>
                 <MarginContainer>
-                    <ImageContainer title="Cutting-Edge Drone Media" image={DroneGif} alt="drone shot" text="Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down."/>
+                    <ImageContainer title="Cutting-Edge Drone Media" image={house2} alt="drone shot" text="Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down."/>
                 </MarginContainer>
             </InfoContainer>
+            </Fade>
 
         </Layout>
     );

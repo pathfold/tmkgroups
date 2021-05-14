@@ -21,7 +21,7 @@ const IconContainer = styled("div")`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 50px;
+    margin: 50px 0px;
     text-align: center;
 
     .iconCard {
@@ -53,10 +53,10 @@ const Icon = props => {
 
 const IconCard = props => {
     return (
-        <div className="iconCard" style={{display:`flex`, flexDirection:"column", alignItems:`center`}}>
+        <div className="iconCard" style={{display:`flex`, flexDirection:"column", alignItems:`center`, marginBottom:`30px`}}>
             <Icon icon={props.icon}/>
             <h3>{props.title}</h3>
-            <p>Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down.</p>
+            <p>{props.desc}</p>
         </div>
     )
 }
@@ -64,12 +64,12 @@ const IconCard = props => {
 export default function Offer(props){
     return (
         <Jumbo2Grand style={{display: `flex`, flexDirection:`column`}}>
-            <h2 className="specialHeader">What We Offer</h2>
+            <h2>What We Offer</h2>
             <IconContainer>
-                <IconCard icon={faHome} title="Interior"/>
-                <IconCard icon={faTree} title="Exterior"/>
-                <IconCard icon={faCloud} title="Drone Media"/>
-                <IconCard icon={faPencilRuler} title="Floor Plans"/>
+                <IconCard icon={faHome} title="Interior" desc="Picture-perfect media with the best lighting and angles"/>
+                <IconCard icon={faTree} title="Exterior" desc="Picture-perfect media with the best lighting and angles"/>
+                <IconCard icon={faCloud} title="Drone Media" desc="Picture-perfect media with the best lighting and angles"/>
+                <IconCard icon={faPencilRuler} title="Floor Plans" desc="Picture-perfect media with the best lighting and angles"/>
             </IconContainer>
         </Jumbo2Grand>
     );

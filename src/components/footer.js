@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "@emotion/styled";
 import {Link} from "gatsby";
-import logo from "../images/tmkLogoLong.png";
+import logo from "../images/newLogo.svg";
+import logoBlack from "../images/newLogoBlack.svg";
 
 const FooterParent = styled("div")`
-    background: black;
+    background: white;
+    box-shadow: 0 -2px 8px #d1d1d1;
     display: block;
     z-index: 100;
     width: 100%;
@@ -15,17 +17,22 @@ const FooterParent = styled("div")`
 
 const FooterLogo = props => {
     return (
-        <img src={logo} alt="tmk logo" style={{width:`140px`, height:`70px`}}/>
+        <img src={logoBlack} alt="tmk logo" style={{maxHeight: `50px`}}/>
     );
 }
 
 const FooterNav = styled("div")`
     display: flex;
-    flex-direction: column;
 
     a {
-        margin-right: 20px;
-        color: white;
+        margin-right: 40px;
+        color: black;
+        line-height: 50px;
+        transition: .3s;
+    }
+
+    a:hover {
+        color: #8dcaff;
     }
 `
 
