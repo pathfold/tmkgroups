@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import logo from "../images/newLogo.svg";
 import logoBlack from "../images/newLogoBlack.svg";
 import {Link} from "gatsby";
-import { NavLink, useLocation } from "react-router-dom";
+import {Navbar} from "react-bootstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"

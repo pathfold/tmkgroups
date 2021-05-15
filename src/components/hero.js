@@ -11,7 +11,7 @@ const Background = styled("div")`
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${ landingImg });
     background-size: cover;
-    height: 880px;
+    height: 90vh;
     color: white;
     text-align: center;
     //transform: translate3d(0,-80px,0);
@@ -21,10 +21,13 @@ const MarginContainer = styled("div")`
     max-width: 1300px;
     margin: 0 auto;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 const ContentContainer = styled("div")`
-    padding: 300px 30px;
+    padding: 0px 30px;
 
     #arrow {
         transition: 0.3s;
