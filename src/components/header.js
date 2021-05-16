@@ -18,12 +18,6 @@ const HeaderParent = styled("div")`
 `
 
 const HeaderChild = styled("div")`
-    @media (max-width: 900px){
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-    }
-
     max-width: 1400px;
     margin: 0 auto;
     display: flex;

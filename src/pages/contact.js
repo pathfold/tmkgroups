@@ -5,6 +5,8 @@ import Helmet from "react-helmet";
 import Layout from "../components/layout";
 import Title from "../components/title";
 
+import emailjs from "emailjs-com";
+
 import {Form, Button} from "react-bootstrap";
 
 const MarginContainer = styled("div")`
@@ -14,7 +16,24 @@ const MarginContainer = styled("div")`
 
 const ContentContainer = styled("div")`
     padding: 100px 50px;
+
+    @media (max-width: 900px){
+        padding: 150px 50px;
+    }
 `
+
+function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_f2pqxlk', 'template_mzg5by3', e.target, 'user_wyLEIvMbK8UOSG4RzrjIw')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    
+      e.target.reset();
+}
 
 export default function Contact(){
     return (
@@ -29,18 +48,22 @@ export default function Contact(){
                 <ContentContainer>
                     <Title top="Contact Me" bottom="Have any questions or concerns? Contact me directly with the form below"/>
 
-                    <Form>
-                        <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form onSubmit={sendEmail}>
+                        <Form.Group controlId="contactForm.Email">
                             <Form.Label>Email address</Form.Label>
-                            <Form.Control type="email" placeholder="name@example.com" />
+                            <Form.Control type="email" placeholder="name@example.com" name="email"/>
                         </Form.Group>
-                        <Form.Group controlId="exampleForm.Subject">
+                        <Form.Group controlId="contactForm.Name">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control type="text" placeholder="Your Name" name="from_name"/>
+                        </Form.Group>
+                        <Form.Group controlId="contactForm.Subject">
                             <Form.Label>Subject</Form.Label>
-                            <Form.Control type="text" placeholder="Enter your message subject here"/>
+                            <Form.Control type="text" placeholder="Enter your message subject here" name="subject"/>
                         </Form.Group>
-                        <Form.Group controlId="exampleForm.ControlTextarea1">
+                        <Form.Group controlId="contactForm.ControlTextarea1">
                             <Form.Label>Message</Form.Label>
-                            <Form.Control as="textarea" placeholder="Enter your message here" rows={10} />
+                            <Form.Control as="textarea" placeholder="Enter your message here" rows={10} name="message"/>
                         </Form.Group>
                         <Button variant="primary" type="submit">
                             Submit
