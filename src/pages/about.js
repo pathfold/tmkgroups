@@ -13,7 +13,7 @@ const MarginContainer = styled("div")`
 `
 
 const ContentContainer = styled("div")`
-    padding: 0px 50px;
+    padding: 100px 50px;
     text-align: center;
 `
 

@@ -61,7 +61,7 @@ const MarginContainer = styled("div")`
 `
 
 const ContentContainer = styled("div")`
-    padding: 0px 30px;
+    padding: 100px 30px;
 `
 
 
@@ -78,6 +78,7 @@ export default function Gallery(){
         <Layout>
             <Helmet>
                 <title>Gallery | TMK Photos</title>
+                <body style="font-family: catamaran"></body>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
             </Helmet>
 

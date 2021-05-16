@@ -47,7 +47,8 @@ const globalStyles = css`
 
     body.dark-header {
         .header { 
-            background-color: black;
+            background-color: transparent;
+            box-shadow: none;
             transition: .3s;
             
             a, svg {
