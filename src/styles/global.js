@@ -17,9 +17,17 @@ const globalStyles = css`
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 3.5em;
         color: white;
         display: inline-block;
+
+        @media(max-width: 1200px) {
+            font-size: 3em;
+        }
+
+        @media(max-width: 600px) {
+            font-size: 2.7em;
+        }
     }
 
     h2 {
