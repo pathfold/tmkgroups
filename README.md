@@ -1,11 +1,12 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/70015389-c29c-4169-ad6c-b4d61d457726/deploy-status)](https://app.netlify.com/sites/tmkgroups/deploys)
+
 <p align="center">
-  <a href="https://www.tmkphotos.com">
-    <h1>tmkphotos.com</h1>
+  <a href="https://www.tmkgroups.com">
+    <h1>tmkgroups.com</h1>
   </a>
 </p>
 
-Business website built with [React](https://reactjs.org/) and [Gatsby](https://www.gatsbyjs.com/)
+Business website built with [React](https://reactjs.org/) and [Gatsby](https://www.gatsbyjs.com/) 
 
 ## 🚀 Quick start
 
