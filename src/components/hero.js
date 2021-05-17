@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Fade from "react-reveal/Fade";
 import {Link} from "gatsby";
-import landingImg from "../images/exterior1.jpg";
+import landingImg from "../images/hero.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
