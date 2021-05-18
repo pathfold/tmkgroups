@@ -5,19 +5,16 @@ import Helmet from "react-helmet";
 import Layout from "../components/layout";
 import Title from "../components/title";
 
-import i1 from "../images/interior1.jpg";
-import i2 from "../images/interior2.jpg";
-import i3 from "../images/interior3.jpg";
-
-import e1 from "../images/exterior1.jpg";
-import e2 from "../images/exterior2.jpg";
-import e3 from "../images/exterior3.jpg";
-
 import { SRLWrapper } from "simple-react-lightbox";
 
 import {Tab} from 'react-bootstrap';
 import {Tabs} from 'react-bootstrap'; 
 import {Button} from "react-bootstrap";
+
+const interiorList = ["i1", "i2", "i3", "i4", "i5", "i6", "i7", "i8", "i9", "i10", "i11", "i12", "i13", "i14", "i15", "i16", "i17", "i18", "i19", "i20", "i21", "i22", "i23", "i24", "i25", "i26", "i27", "i28", "i29", "i30", "i31"]
+const exteriorList = ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9", "e10", "e11", "e12", "e13", "e14"];
+const droneList = ["drone1", "drone2", "drone3", "drone4", "drone5", "drone6", "drone7", "drone8", "drone9", "drone10", "drone11", "drone12"];
+const floorPlanList = ["fp1", "fp2", "fp3", "fp4", "fp5", "fp6"];
 
 const GalleryContainer = styled("div")`
     div {
@@ -90,38 +87,46 @@ export default function Gallery(){
                         <Tab eventKey="interior" title="Interior">
                             <GalleryContainer>
                                 <SRLWrapper>
-                                    <GalleryImg src={i1}/>
-                                    <GalleryImg src={i2}/>
-                                    <GalleryImg src={i3}/>
-                                    <GalleryImg src={i1}/>  
-                                    <GalleryImg src={i2}/>  
-                                    <GalleryImg src={i3}/>
-                                    <GalleryImg src={i1}/>  
-                                    <GalleryImg src={i2}/>  
-                                    <GalleryImg src={i3}/>  
+                                    {interiorList.map((path) => 
+                                        {
+                                            return <GalleryImg src={require("../images/gallery/interior/" + path + ".jpg").default} />
+                                        })
+                                    }
                                 </SRLWrapper>
                             </GalleryContainer>    
                         </Tab>
                         <Tab eventKey="exterior" title="Exterior">
                             <GalleryContainer>
                                 <SRLWrapper>
-                                    <GalleryImg src={e1}/>
-                                    <GalleryImg src={e2}/>
-                                    <GalleryImg src={e3}/>
-                                    <GalleryImg src={e1}/>  
-                                    <GalleryImg src={e2}/>  
-                                    <GalleryImg src={e3}/>
-                                    <GalleryImg src={e1}/>  
-                                    <GalleryImg src={e2}/>  
-                                    <GalleryImg src={e3}/>  
+                                    {exteriorList.map((path) => 
+                                        {
+                                            return <GalleryImg src={require("../images/gallery/exterior/" + path + ".jpg").default} />
+                                        })
+                                    }
                                 </SRLWrapper>
                             </GalleryContainer>  
                         </Tab>
                         <Tab eventKey="droneImages" title="Drone Images">
-                            Test
+                            <GalleryContainer>
+                                <SRLWrapper>
+                                    {droneList.map((path) => 
+                                        {
+                                            return <GalleryImg src={require("../images/gallery/droneImages/" + path + ".jpg").default} />
+                                        })
+                                    }
+                                </SRLWrapper>
+                            </GalleryContainer> 
                         </Tab>
                         <Tab eventKey="floorPlans" title="Floor Plans">
-                            Test
+                            <GalleryContainer>
+                                <SRLWrapper>
+                                    {floorPlanList.map((path) => 
+                                        {
+                                            return <GalleryImg src={require("../images/gallery/floorPlans/" + path + ".jpg").default} />
+                                        })
+                                    }
+                                </SRLWrapper>
+                            </GalleryContainer> 
                         </Tab>
                     </Tabs>
                 </ContentContainer>
