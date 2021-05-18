@@ -24,7 +24,7 @@ const ContentContainer = styled("div")`
 
 function sendEmail(e) {
     e.preventDefault();
-    
+    /*
     emailjs.sendForm('service_f2pqxlk', 'template_mzg5by3', e.target, 'user_wyLEIvMbK8UOSG4RzrjIw')
       .then((result) => {
           console.log(result.text);
@@ -32,7 +32,7 @@ function sendEmail(e) {
           console.log(error.text);
       });
     
-      e.target.reset();
+      e.target.reset();*/
 }
 
 export default function Contact(){
@@ -41,7 +41,7 @@ export default function Contact(){
     return (
         <Layout>
             <Helmet>
-                <title>Contact | TMK Photos</title>
+                <title>Contact | TMK Groups</title>
                 <body style="font-family: catamaran"></body>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
             </Helmet>

@@ -35,7 +35,7 @@ export default function About(){
     return (
         <Layout>
             <Helmet>
-                <title>About | TMK Photos</title>
+                <title>About | TMK Groups</title>
             </Helmet>
             
             <MarginContainer>

@@ -40,7 +40,7 @@ const ContentContainer = styled("div")`
 
 const Arrow = props => {
     return (
-    <a href="#info" style={{ cursor:`pointer`, position: `absolute`, bottom: `5vh`, left:`49%`}}>
+    <a href="#info" style={{ cursor:`pointer`, position: `absolute`, bottom: `7vh`, left:`49%`}}>
         <FontAwesomeIcon id="arrow" color="white" size="3x" icon={props.icon} />
     </a>
     )

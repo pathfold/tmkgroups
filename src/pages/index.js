@@ -35,7 +35,7 @@ export default function Landing(){
     return (
         <Layout>
             <Helmet>
-                <title>Quality Media | TMK Photos</title>
+                <title>Quality Media | TMK Groups</title>
                 <body className="dark-header"/>
             </Helmet>
 
