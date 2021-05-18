@@ -5,8 +5,8 @@ import Layout from "../components/layout";
 import {Link} from "gatsby";
 import Fade from "react-reveal/Fade";
 
-import left from "../images/interior1.jpg";
-import drone from "../images/drone.jpg"
+import landing1 from "../images/landing1.jpg";
+import landing2 from "../images/landing2.jpg"
 
 import Hero from "../components/hero";
 import ImageContainer from "../components/imageContainer";
@@ -44,7 +44,7 @@ export default function Landing(){
             <Fade>
             <InfoContainer id="info">
                 <MarginContainer>
-                    <ImageContainer title="Assured Craftsmanship In Your Photos" image={left} alt="kitchen island" text="Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down."/>
+                    <ImageContainer title="Assured Craftsmanship In Your Photos" image={landing1} alt="kitchen island" text="Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down."/>
                 </MarginContainer>
             </InfoContainer>
 
@@ -56,7 +56,7 @@ export default function Landing(){
 
             <InfoContainer>
                 <MarginContainer>
-                    <ImageContainer title="Cutting-Edge Drone Media" image={drone} alt="drone shot" text="Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down."/>
+                    <ImageContainer title="Cutting-Edge Drone Media" image={landing2} alt="drone shot" text="Unreal Engine is a state-of-the-art real-time engine and editor that features photorealistic rendering, dynamic physics and effects, lifelike animation, robust data translation, and much more—on a open, extensible platform that won't tie you down."/>
                 </MarginContainer>
             </InfoContainer>
             </Fade>
