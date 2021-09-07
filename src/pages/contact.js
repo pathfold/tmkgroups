@@ -24,15 +24,15 @@ const ContentContainer = styled("div")`
 
 function sendEmail(e) {
     e.preventDefault();
-    /*
-    emailjs.sendForm('service_f2pqxlk', 'template_mzg5by3', e.target, 'user_wyLEIvMbK8UOSG4RzrjIw')
+    
+    emailjs.sendForm(process.env.EMAIL_SERVICE, process.env.EMAIL_TEMPLATE, e.target, process.env.EMAIL_USER)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
     
-      e.target.reset();*/
+      e.target.reset();
 }
 
 export default function Contact(){

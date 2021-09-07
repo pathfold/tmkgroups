@@ -40,8 +40,7 @@ const globalStyles = css`
         margin-bottom: 30px;
     }
 
-    .header { 
-        background-color: white;
+    .header {
         transition: .3s;
     }
 

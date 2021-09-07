@@ -1,0 +1,21 @@
+.header {
+    background: transparent;
+    transition: transform 0.6s ease;
+}
+
+.header2 {
+    background: white;
+    transition: transform 0.6s ease;
+    animation: myanimation .25s;
+}
+
+@keyframes myanimation {
+    0% {
+      background-color: transparent;
+      color: white;
+    }
+    100% {
+      background-color: white;
+      color: black;
+    }
+  }

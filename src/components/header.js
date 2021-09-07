@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styled from "@emotion/styled";
 import logo from "../images/newLogo.svg";
 import logoBlack from "../images/newLogoBlack.svg";
 import {Link} from "gatsby";
 import {Navbar} from "react-bootstrap";
+
+import "./header.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebookF, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
@@ -99,10 +101,27 @@ export default function Header(){
     const url_split = url.split("/");
     const path = url_split[3];
 
+    const [header, setHeader] = useState("header")
+
+    const listenScrollEvent = (event) => {
+        if (window.scrollY < 73) {
+          return setHeader("header")
+        } else if (window.scrollY > 70) {
+          return setHeader("header2")
+        } 
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', listenScrollEvent);
+      
+        return () =>
+          window.removeEventListener('scroll', listenScrollEvent);
+    }, []);
+
     return (
-        <HeaderParent className="header">
+        <HeaderParent className={header}>
             <HeaderChild>
-                <Brand logo={["about", "contact", "gallery"].includes(path) ? logoBlack : logo} url="/"/>
+                <Brand logo={(["about", "contact", "gallery"].includes(path) || header === "header2") ? logoBlack : logo} url="/"/>
                 <Nav>
                     <Link to="/about" className="nav-element">About</Link>
                     <Link to="/gallery" className="nav-element">Gallery</Link>
